@@ -1,0 +1,114 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #eaf9f9 100%);
+  box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 15px;
+}
+
+.home-logo {
+  width: 100px;
+  height: auto;
+  animation: home-float 3s ease-in-out infinite;
+}
+
+.home-title {
+  font-size: 4rem;
+  font-family: 'Arial Black', sans-serif;
+  background: linear-gradient(270deg, #247D7F, #7FD3D0, #A1FFEE, #247D7F);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: home-manaEffect 15s ease infinite;
+  letter-spacing: 2px;
+}
+
+/* ===== GRID ===== */
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
+}
+
+/* ===== CARDS ===== */
+.home-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  background: #247D7F;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.home-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.1),
+    0 0 25px 10px rgba(36,125,127,0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .home-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-logo {
+    margin-bottom: 10px;
+  }
+
+  .home-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .home-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 90%;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes home-manaEffect {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes home-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes home-subtleMana {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}

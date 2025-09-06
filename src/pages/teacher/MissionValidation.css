@@ -1,0 +1,237 @@
+/* Conteneur général */
+.mission-container {
+  padding: 20px;
+  background-color: #f5f5f5; /* gris clair */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Onglets */
+.tab-menu {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tab-menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-menu button.active {
+  background-color: #247D7F;
+  color: #fff;
+}
+
+/* Contenu de l'onglet */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Carte mission */
+.mission-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.mission-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.mission-card .mission-info {
+  padding: 12px;
+  font-size: 14px;
+  color: #247D7F; /* vert-bleu */
+}
+
+.mission-card button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.mission-card button.complete {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.mission-card button.complete:hover {
+  background-color: #388e3c;
+}
+
+.mission-card button.reject {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.mission-card button.reject:hover {
+  background-color: #c0392b;
+}
+
+.mission-card button.reset {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.mission-card button.reset:hover {
+  background-color: #d9880f;
+}
+
+.mission-card progress {
+  width: 100%;
+  height: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Formulaire de création de mission */
+.mission-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mission-form input,
+.mission-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.mission-form input:focus,
+.mission-form textarea:focus {
+  border-color: #247D7F;
+  outline: none;
+}
+
+.mission-form button {
+  align-self: flex-start;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #247D7F;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.mission-form button:hover {
+  background-color: #1b5f5f;
+}
+
+.mission-form .error {
+  color: #e74c3c;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* Liste des missions en grille */
+.mission-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Tableau des missions */
+.mission-table-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+  table-layout: auto;
+}
+
+.mission-table th,
+.mission-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  color: #247D7F; /* vert-bleu */
+}
+
+.mission-table thead {
+  background-color: #ecf0f1;
+  color: #247D7F; /* vert-bleu */
+}
+
+.mission-table input,
+.mission-table textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+/* Colonnes XP/Mana/KitsuCoins plus étroites */
+.mission-table th:nth-child(3),
+.mission-table th:nth-child(4),
+.mission-table th:nth-child(5),
+.mission-table td:nth-child(3),
+.mission-table td:nth-child(4),
+.mission-table td:nth-child(5) {
+  width: 70px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mission-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-table th,
+  .mission-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}

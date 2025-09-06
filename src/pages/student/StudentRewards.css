@@ -1,0 +1,146 @@
+/* =========================================
+   StudentRewards.css
+   Boutique élèves / Récompenses
+   Scope isolé : .student-rewards
+========================================= */
+
+.student-rewards {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+  color: #111;
+}
+
+/* Titres */
+.student-rewards h2,
+.student-rewards h3 {
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* Grille boutique */
+.student-rewards .rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+/* Carte individuelle */
+.student-rewards .reward-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-rewards .reward-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.student-rewards .reward-card h3 {
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.student-rewards .reward-card p {
+  font-size: 0.85rem;
+  margin: 0.2rem 0;
+}
+
+/* Bouton achat */
+.student-rewards .reward-card button {
+  margin-top: auto;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--color-accent, #4a90e2);
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.student-rewards .reward-card button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background-color: #357ABD;
+}
+
+.student-rewards .reward-card button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Images ou icônes */
+.student-rewards .reward-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+}
+
+/* Tableau historique d'achats */
+.student-rewards table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.student-rewards th,
+.student-rewards td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.student-rewards th {
+  background-color: #f0f0f0;
+}
+
+.student-rewards tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Responsive */
+
+/* Tablette */
+@media screen and (max-width: 900px) {
+  .student-rewards .rewards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .student-rewards .reward-card {
+    min-height: 160px;
+    padding: 0.4rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .student-rewards .rewards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .student-rewards .reward-card {
+    min-height: 150px;
+    padding: 0.3rem;
+  }
+  .student-rewards th,
+  .student-rewards td {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+}

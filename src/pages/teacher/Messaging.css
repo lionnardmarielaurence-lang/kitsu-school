@@ -1,0 +1,193 @@
+/* ================== Wrapper principal ================== */
+.teacher-msg-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* ================== Sidebar ================== */
+.teacher-msg-sidebar {
+  width: 280px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.teacher-msg-sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.teacher-msg-sidebar select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+
+.teacher-msg-new-btn {
+  margin-top: 5px;
+  padding: 8px 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.teacher-msg-new-btn:hover {
+  background-color: #2980b9;
+}
+
+.teacher-msg-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.teacher-msg-item {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #2c3e50;
+}
+
+.teacher-msg-item.active,
+.teacher-msg-item:hover {
+  background-color: #247d7f;
+  color: #fff;
+}
+
+/* ================== Chat area ================== */
+.teacher-msg-chat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.teacher-msg-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 10px;
+}
+
+.teacher-msg-row {
+  display: flex;
+}
+
+.teacher-msg-row.sent {
+  justify-content: flex-end;
+}
+
+.teacher-msg-row.received {
+  justify-content: flex-start;
+}
+
+.teacher-msg-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+/* Messages envoyés par le prof */
+.teacher-msg-row.sent .teacher-msg-bubble {
+  background-color: #247d7f;
+  color: #fff;
+}
+
+/* Messages reçus */
+.teacher-msg-row.received .teacher-msg-bubble {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ================== Input area ================== */
+.teacher-msg-input-area {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.teacher-msg-input-area input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.teacher-msg-send-btn {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  background-color: #247d7f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Hover léger */
+.teacher-msg-send-btn:hover {
+  background-color: #1c5d61;
+}
+
+/* ================== No chat selected ================== */
+.teacher-msg-no-chat {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* ================== Scrollbar ================== */
+.teacher-msg-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teacher-msg-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .teacher-msg-wrapper {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .teacher-msg-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}

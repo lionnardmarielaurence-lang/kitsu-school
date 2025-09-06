@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* ==================== Côté gauche ==================== */
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6fa;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+form input {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #247D7F;
+}
+
+form button[type="submit"] {
+  padding: 12px;
+  background-color: #247D7F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1f6b6c;
+}
+
+.error-message {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Bouton retour */
+.return-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 12px 24px;
+  background-color: #247D7F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.return-button:hover {
+  background-color: #1f6b6c;
+}
+
+/* ==================== Côté droit ==================== */
+.login-right {
+  flex: 1;
+  background-color: #247D7F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image centrée et limitée */
+.login-race-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-width: 90%;   /* largeur maximale 90% du panel */
+  max-height: 90%;  /* hauteur maximale 90% du panel */
+  object-fit: contain;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+  }
+  .login-left, .login-right {
+    flex: unset;
+    height: 50vh;
+  }
+  .login-race-image {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}

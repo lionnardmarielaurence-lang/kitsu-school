@@ -1,0 +1,122 @@
+/* ---------- Conteneur principal ---------- */
+.TeacherProfil-card {
+  background-color: #fff; 
+  padding: 1.5rem; /* comme student-profile */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ombre identique */
+  max-width: 900px; /* largeur identique au profil étudiant */
+  margin: 2rem auto; /* centrage identique */
+  font-family: 'Arial', sans-serif; /* même police que student-profile */
+  transition: transform 0.25s, box-shadow 0.25s;
+  color: #111; /* texte foncé pour cohérence */
+}
+
+.TeacherProfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------- Titre ---------- */
+.TeacherProfil-card h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #247D7F;
+  font-weight: bold;
+}
+
+/* ---------- Informations prof ---------- */
+.TeacherProfil-info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.TeacherProfil-info strong {
+  font-weight: 600;
+  color: #247D7F;
+}
+
+/* ---------- Token ---------- */
+.TeacherProfil-token-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.TeacherProfil-token {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  color: #247D7F;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.TeacherProfil-token:hover {
+  background-color: #e0e0e0;
+}
+
+/* ---------- Bouton régénérer ---------- */
+.TeacherProfil-regenerate-btn {
+  background-color: #247D7F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.TeacherProfil-regenerate-btn:hover {
+  background-color: #1b5f5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 125, 127, 0.3);
+}
+
+.TeacherProfil-regenerate-btn:disabled {
+  background-color: #94c3c4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- Message confirmation ---------- */
+.TeacherProfil-confirmation {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #4CAF50;
+  animation: TeacherProfil-fadeInOut 2s ease-in-out;
+}
+
+@keyframes TeacherProfil-fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .TeacherProfil-card {
+    padding: 1.25rem;
+    width: 90%;
+  }
+
+  .TeacherProfil-token-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .TeacherProfil-regenerate-btn {
+    width: 100%;
+  }
+}

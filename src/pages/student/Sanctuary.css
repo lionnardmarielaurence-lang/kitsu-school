@@ -1,0 +1,137 @@
+/* =========================================
+   Sanctuary.css
+   Sanctuaire de Mana - Élève
+========================================= */
+
+.sanctuary {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+  color: #111;
+}
+
+.sanctuary h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Grille des récompenses */
+.rewards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Carte individuelle */
+.mana-reward-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre et détails */
+.mana-reward-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.mana-reward-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Thermomètre vertical */
+.thermometer {
+  width: 50px;
+  height: 180px;
+  margin: 0.5rem 0;
+  background-color: #ddd;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.thermometer-fill {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, #7e4eef, #4a1ca6, #163ca6);
+  box-shadow: 0 0 6px #4a1ca6, 0 0 12px rgba(126,78,239,0.6);
+  transition: height 1s ease-in-out; /* plus fluide pour gros dépôts */
+}
+
+/* Boutons */
+.mana-reward-card button {
+  margin-top: 0.5rem;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mana-reward-card button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background-color: #357ABD;
+}
+
+/* Bouton +10 Mana différent */
+.mana-reward-card button:nth-of-type(2) {
+  background-color: #7e4eef;
+}
+
+.mana-reward-card button:nth-of-type(2):hover:not(:disabled) {
+  background-color: #5c2bcc;
+}
+
+/* Espacement entre les deux boutons */
+.mana-reward-card button + button {
+  margin-left: 0.5rem;
+}
+
+.mana-reward-card button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Texte récompense débloquée */
+.unlocked {
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .rewards-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .mana-reward-card {
+    padding: 0.8rem;
+  }
+
+  .thermometer {
+    height: 150px;
+    width: 40px;
+  }
+
+  .mana-reward-card button {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+}

@@ -1,0 +1,213 @@
+/* Conteneur principal */
+.mission-creation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Titre principal */
+.mission-creation h1 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* Onglets */
+.tab-menu {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: flex-start;
+}
+
+.tab-menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-menu button.active {
+  background-color: #247D7F;
+  color: #fff;
+}
+
+/* Contenu de l’onglet */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Carte de mission */
+.mission-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mission-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Messages */
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.success-message {
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Formulaire */
+.mission-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mission-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mission-form input,
+.mission-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  color: #2c3e50;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.mission-form input::placeholder,
+.mission-form textarea::placeholder {
+  color: #7f8c8d;
+}
+
+.mission-form textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+/* Boutons */
+.mission-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button.create-button,
+button.edit-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button.create-button:hover,
+button.edit-button:hover {
+  background-color: #2980b9;
+}
+
+button.cancel-button,
+button.delete-button {
+  background-color: #7f8c8d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button.cancel-button:hover,
+button.delete-button:hover {
+  background-color: #606f7b;
+}
+
+/* Tableau */
+.mission-table-container {
+  width: 100%;
+  overflow-x: hidden; /* suppression du scroll horizontal */
+}
+
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+  table-layout: auto; /* auto pour s’adapter à la largeur disponible */
+}
+
+.mission-table th,
+.mission-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.mission-table thead {
+  background-color: #ecf0f1;
+}
+
+/* Colonnes XP/Mana/KitsuCoins plus étroites */
+.mission-table th:nth-child(3),
+.mission-table th:nth-child(4),
+.mission-table th:nth-child(5),
+.mission-table td:nth-child(3),
+.mission-table td:nth-child(4),
+.mission-table td:nth-child(5) {
+  width: 70px;
+  text-align: center;
+}
+
+.mission-table input,
+.mission-table textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mission-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-table th,
+  .mission-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}

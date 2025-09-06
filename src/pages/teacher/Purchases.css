@@ -1,0 +1,72 @@
+/* Conteneur principal */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5; /* gris clair */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Titre principal */
+.dashboard-title {
+  text-align: left;
+  margin-bottom: 25px;
+  color: #247D7F; /* vert-bleu */
+}
+
+/* Messages */
+.loading {
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+.no-data {
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Tableau */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+  table-layout: auto;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  color: #247D7F; /* vert-bleu pour texte */
+}
+
+.dashboard-table thead {
+  background-color: #ecf0f1;
+  color: #247D7F; /* vert-bleu */
+}
+
+.dashboard-table th {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-table th,
+  .dashboard-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+  .dashboard-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,77 @@
+.login-teacher-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.login-teacher-container h1 {
+  color: #247D7F;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-shadow: 0 0 5px rgba(36, 125, 127, 0.5);
+}
+
+.login-teacher-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-teacher-container input:focus {
+  border-color: #247D7F;
+  box-shadow: 0 0 8px rgba(36, 125, 127, 0.3);
+  outline: none;
+}
+
+.login-teacher-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #247D7F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-teacher-container button:hover {
+  background-color: #1e6869;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(36, 125, 127, 0.6), 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.back-home-button {
+  width: auto;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #247D7F;
+  background-color: white;
+  color: #247D7F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-home-button:hover {
+  background-color: #247D7F;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(36, 125, 127, 0.5);
+}
+
+.login-error {
+  color: #d9534f;
+  margin: 10px 0;
+  font-weight: bold;
+}

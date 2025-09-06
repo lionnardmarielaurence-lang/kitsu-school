@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.register-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px;
+  text-align: center;
+  background-color: #f7f9fc; /* fond clair comme le contenu de l’app */
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-family: "Arial", sans-serif;
+  border: 1px solid #e0e6ed;
+}
+
+/* Titre */
+.register-container h1 {
+  color: #247D7F;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(36, 125, 127, 0.4);
+}
+
+/* Champs de saisie */
+.register-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-container input:focus {
+  border-color: #247D7F;
+  box-shadow: 0 0 10px rgba(36, 125, 127, 0.35);
+  outline: none;
+}
+
+/* Bouton principal */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background-color: #247D7F;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-container button:hover:not(:disabled) {
+  background-color: #1e6869;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(36, 125, 127, 0.5), 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.register-container button:disabled {
+  background-color: #a3c6c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Bouton secondaire (Retour à l'accueil) */
+.secondary-container {
+  margin-top: 20px;
+}
+
+.secondary-button {
+  width: auto;
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: 1px solid #247D7F;
+  background-color: white;
+  color: #247D7F;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #247D7F;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(36, 125, 127, 0.4);
+}
+
+/* Message d'erreur */
+.error-message {
+  color: #d9534f;
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: 14px;
+}

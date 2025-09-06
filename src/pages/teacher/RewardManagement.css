@@ -1,0 +1,223 @@
+/* ================== Conteneur principal du HUB ================== */
+.reward-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5; /* arrière-plan du HUB */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* Carte principale */
+.reward-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Titre */
+.reward-card h1,
+.reward-card h2 {
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* ================== Onglets ================== */
+.tab-menu {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tab-menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-menu button.active {
+  background-color: #247D7F;
+  color: #fff;
+}
+
+/* Contenu onglet */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================== Formulaires ================== */
+.reward-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .reward-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reward-form input,
+.reward-form textarea,
+.reward-form select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  color: #2c3e50;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.reward-form textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+/* Champs mini pour KitsuCoins / Stock */
+.reward-input-mini {
+  width: 100%;
+  max-width: 120px; /* limite la largeur */
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Conteneur des stats (KitsuCoins / Stock) */
+.reward-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ================== Boutons ================== */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-success {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #2980b9;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* ================== Grille des récompenses ================== */
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.rewards-grid .reward-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ================== Barre de progression ================== */
+.progress-container {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #247D7F;
+  width: 0%;
+  transition: width 0.4s ease;
+  border-radius: 6px;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ================== Messages ================== */
+.no-rewards {
+  font-style: italic;
+  text-align: center;
+  color: #777;
+  margin-top: 15px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.success-message {
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .reward-form {
+    grid-template-columns: 1fr;
+  }
+
+  .reward-input-mini {
+    max-width: 100%;
+  }
+}
